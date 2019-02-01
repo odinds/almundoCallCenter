@@ -22,15 +22,6 @@ public class ManagerCallsService implements Runnable{
 	private static final Logger logger = LoggerFactory.getLogger(ManagerCallsService.class);
 	
 	private SupportQueue supportQueue = SupportQueue.getInstance();
-//	
-//	private OperadorBusyQueue operadorBusyQueue = OperadorBusyQueue.getInstance(); 
-//	private OperadorFreeQueue operadorFreeQueue = OperadorFreeQueue.getInstance(); 
-//	
-//	private SupervisorBusyQueue supervisorBusyQueue = SupervisorBusyQueue.getInstance(); 
-//	private SupervisorFreeQueue supervisorFreeQueue = SupervisorFreeQueue.getInstance();	
-//	
-//	private DirectorBusyQueue directorBusyQueue = DirectorBusyQueue.getInstance(); 
-//	private DirectorFreeQueue directorFreeQueue = DirectorFreeQueue.getInstance();
 	
 	Long timeInterval = new Long(0L);
 	Integer callsToProcces = new Integer(0);
