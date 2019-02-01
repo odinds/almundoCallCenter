@@ -26,7 +26,7 @@ import com.almundo.test.model.SupportCall;
 import com.almundo.test.model.SupportQueue;
 
 /**
- * 
+ * @see Dispatcher principal del sistema, encargado de gestionar las llamadas
  * @author Daniel Sarmiento
  *
  */
@@ -67,11 +67,10 @@ public class CallDispatcherImpl implements CallDispatcher{
 			}
 		}
 		
-//		logger.info("!!--------------------------- llamada Terminada: {}", call);
 	}
 
 	/**
-	 * @see Asigna la llamada 
+	 * @see Asigna la llamada, e inicia el soporte 
 	 */
 	private synchronized void assignSupport() {
 		SupportCall sprCall = new SupportCall();

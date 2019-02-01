@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import com.almundo.test.model.observer.CallsQueueChangeEvent;
 
 /**
- * 
+ * @see Clase que contiene y controla la cola de llamadas en espera
  * @author Daniel Sarmiento
  *
  */

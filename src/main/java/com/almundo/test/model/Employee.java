@@ -5,7 +5,7 @@ import java.util.Observable;
 import com.almundo.test.model.observer.EmployeeChangeStatusEvent;
 
 /**
- * 
+ * @see Representa al empleado
  * @author Daniel Sarmiento
  *
  */

@@ -3,7 +3,7 @@ package com.almundo.test.model;
 import java.time.LocalTime;
 
 /**
- * 
+ * @see Clase que representa la llamada
  * @author Daniel Sarmiento
  *
  */

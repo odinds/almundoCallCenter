@@ -7,7 +7,7 @@ import java.util.Queue;
 import com.almundo.test.model.observer.OperadorQueueChangeEvent;
 
 /**
- * 
+ * @see Clase que contiene y controla la cola de los operadores libres
  * @author Daniel Sarmiento
  *
  */

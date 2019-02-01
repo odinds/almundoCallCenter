@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.almundo.test.model.observer.SupportQueueChangeEvent;
 
 /**
- * 
+ * @see Clase que contiene y controla la lista de llamadas en proceso
  * @author Daniel Sarmiento
  *
  */

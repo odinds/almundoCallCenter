@@ -1,7 +1,7 @@
 package com.almundo.test.model;
 
 /**
- * 
+ * @see Clase que representa el Operador
  * @author Daniel Sarmiento
  *
  */

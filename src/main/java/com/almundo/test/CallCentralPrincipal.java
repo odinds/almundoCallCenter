@@ -2,11 +2,11 @@ package com.almundo.test;
 
 import java.util.Map;
 import java.util.Observer;
-import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -45,6 +45,9 @@ public class CallCentralPrincipal implements CommandLineRunner {
 	@Autowired
 	private Map<EmployeeLevel,Map<Integer,Employee>> empleadosExitentes;	
 	
+	@Value("${almundo.incomingCall}")
+	private String incomingCallConfig;
+	
 	private OperadorFreeQueue operadorFreeQueue = OperadorFreeQueue.getInstance();
 	private SupervisorFreeQueue supervisorFreeQueue = SupervisorFreeQueue.getInstance();
 	private DirectorFreeQueue directorFreeQueue = DirectorFreeQueue.getInstance();
@@ -53,7 +56,7 @@ public class CallCentralPrincipal implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		logger.info("..............Inicio Sistema............");
 		
-		Integer incomingCall = new Random().nextInt(20)+8;
+		Integer incomingCall = new Integer(incomingCallConfig);
 		
 		logger.info("Número Simulacion llamadas: {}", incomingCall);
 		beginObservers();
@@ -62,8 +65,6 @@ public class CallCentralPrincipal implements CommandLineRunner {
 		logger.info("-------------------INI Carga Empleados---------");
 		loadQueueEmployees();
 		logger.info("-------------------FIN Carga Empleados---------");
-		
-//		managerCalls.manageSupport(incomingCall);
 		
 		Runnable r = new ManagerCallsService(incomingCall);
 		new Thread(r).start();		
@@ -101,7 +102,7 @@ public class CallCentralPrincipal implements CommandLineRunner {
 	}
 
 	/**
-	 * @see inicia Los observadore
+	 * @see inicia Los observadores
 	 */
 	private void beginObservers() {
 		Observer observerQueueWait = new CallsQueueObserver();

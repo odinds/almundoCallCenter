@@ -22,7 +22,7 @@ import com.almundo.test.model.SupportCall;
 import com.almundo.test.model.SupportQueue;
 
 /**
- * 
+ * @see Proceso alterno que se encargará de terminar y gestionar las llamadas actuales
  * @author Daniel Sarmiento
  *
  */

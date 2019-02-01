@@ -1,5 +1,10 @@
 package com.almundo.test.model;
 
+/**
+ * @see Entidad que representa la llamada en curso con su respectivo usuario de atención 
+ * @author Daniel Sarmiento
+ *
+ */
 public class SupportCall {
 	private Call call;
 	private Employee employee;

@@ -7,7 +7,7 @@ import java.util.Queue;
 import com.almundo.test.model.observer.DirectorQueueChangeEvent;
 
 /**
- * 
+ * @see Clase que contiene y controla la cola de los operadores ocupados
  * @author Daniel Sarmiento
  *
  */

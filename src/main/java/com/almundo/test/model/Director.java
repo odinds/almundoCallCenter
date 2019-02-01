@@ -1,7 +1,7 @@
 package com.almundo.test.model;
 
 /**
- * 
+ * @see Clase que representa al Director
  * @author Daniel Sarmiento
  *
  */

@@ -7,7 +7,7 @@ import java.util.Queue;
 import com.almundo.test.model.observer.SupervisorQueueChangeEvent;
 
 /**
- * 
+ * @see Clase que contiene y controla la cola de los supervisores libres
  * @author Daniel Sarmiento
  *
  */
