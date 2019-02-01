@@ -6,6 +6,7 @@ import java.util.Observable;
 import org.springframework.stereotype.Component;
 
 import com.almundo.test.model.observer.SupportQueueChangeEvent;
+import com.almundo.test.model.observer.SupportRemoveQueueChangeEvent;
 
 /**
  * @see Clase que contiene y controla la lista de llamadas en proceso
@@ -57,9 +58,8 @@ public class SupportQueue {
         }		
 	}
 	
-	public synchronized void removeCall(SupportCall supportCall) {
-		SupportQueueChangeEvent event = new SupportQueueChangeEvent(this);
-		
+	public synchronized void removeSupport(SupportCall supportCall) {
+		SupportRemoveQueueChangeEvent event = new SupportRemoveQueueChangeEvent(supportCall);
 		supports.remove(supportCall);
 		
 		synchronized (OBSERVABLE) {

@@ -21,12 +21,13 @@ y controlará que las llamadas sean terminas en un intervalo de tiempo de entre 
 > - Se definieron varias colas para que el sistema gestione los empleados disponibles y ocupados (Operador, Supervisor y Director)
 como tambien colas para las llamadas en espera.
 > - Se definieron  Observer(Observadores) para notificar los cambios que suceden en el sistema ejemplo: llamada en espera, empleados libres y/o ocupados, etc.
+> - Se define un observador para cuando las llamadass  se han terminado, controla las colas de los empleados.
 
 >> ## **Extras**
 > - En el caso de no haber ningún empleado libre el sistema gestionar toda llamda por medio de una cola de espera y
 por medio de proceso ManagerCallsService monitoriará cada 0.5 segundos
 las llamadas que están siendo atentidas y en el momento que alguna llamada esté dentro del rango de los 5 a 10 segundos, está será terminada
-y dejará disponible al empleado de la llamada terminada.
+y por medio del obsrvador encargado dejará disponible al empleado de la llamada terminada.
 > - Por medio de la cola de llamadas de espera, la lista de llamadas que están siendo atendidas y el proceso que gestiona la liberación de llamadas se tendrá la seguridad de que
 cuando se llega al limite de llamadas concurrentes todas las llamadas serán atendidas.
 
